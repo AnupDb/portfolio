@@ -1,4 +1,3 @@
-import { Link } from "gatsby"
 import React from "react"
 import { Global, css } from "@emotion/core"
 import styled from "@emotion/styled"
@@ -36,9 +35,9 @@ const Header = ({ siteTitle }) => (
     <header>
       <MainTitle>{siteTitle}</MainTitle>
       <div className="navigation">
-        <a href="">Skills</a>
-        <a href="">Projects</a>
-        <a href="">Contact</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#footer">Contact</a>
       </div>
     </header>
   </>

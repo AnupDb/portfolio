@@ -1,7 +1,7 @@
-import React, { useState } from "react"
+import React from "react"
 import Img from "gatsby-image"
 import styled from "@emotion/styled"
-import { Global, css } from "../../node_modules/@emotion/core"
+
 const Background = styled.div`
   background-color: white;
   overflow: hidden;
@@ -37,7 +37,7 @@ const ProjectItem = ({ items }) => {
       {items.map(item => (
         <Background>
           <div>
-            <a href="">
+            <a href={item.node.url} target="_blank">
               <Img
                 className="project"
                 fixed={item.node.image.fixed}
@@ -57,7 +57,7 @@ const ProjectItem = ({ items }) => {
               {item.node.tech4 ? <Li>{item.node.tech4}</Li> : null}
             </ul>
 
-            <A className="projectLink" href="">
+            <A className="projectLink" href={item.node.codeurl} target="_blank">
               View Code
             </A>
           </div>

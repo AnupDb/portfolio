@@ -1,6 +1,5 @@
 import React from "react"
 import { Global, css } from "@emotion/core"
-import styled from "@emotion/styled"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import Image from "../components/image"
@@ -35,6 +34,8 @@ export const query = graphql`
           tech3
           tech4
           description
+          url
+          codeurl
         }
       }
     }
@@ -105,7 +106,7 @@ const IndexPage = ({ data }) => (
         Designer
       </p>
     </div>
-    <section className="skills">
+    <section className="skills" id="skills">
       <h1>Skills</h1>
       <h4 className="color" style={{ fontSize: "20px" }}>
         Front-End Skills:
@@ -117,7 +118,9 @@ const IndexPage = ({ data }) => (
       <Image items={data.allFile.edges} start={7} stop={10} />
     </section>
 
-    <h2 className="break">PROJECTS:</h2>
+    <h2 className="break" id="projects">
+      PROJECTS:
+    </h2>
     <ProjectItem items={data.project.edges} />
   </Layout>
 )

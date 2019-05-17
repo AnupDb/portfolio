@@ -11,7 +11,7 @@ const Foot = styled.section`
 `
 
 const Footer = () => (
-  <Foot>
+  <Foot id="footer">
     <h2>Contact</h2>
     <p>Email:sunnyoranup@gmail.com</p>
     <p>Phone:9774588642</p>
