@@ -11,9 +11,7 @@ const Image = ({ items, start, stop }) => {
   return (
     <Wrapper>
       {items ? (
-        items
-          .slice(start, stop)
-          .map(item => <Img fixed={item.node.childImageSharp.fixed} />)
+        items.map(item => <Img fixed={item.node.childImageSharp.fixed} />)
       ) : (
         <h4>Loading...</h4>
       )}

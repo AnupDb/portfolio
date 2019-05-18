@@ -8,7 +8,19 @@ import ProjectItem from "../components/projectItem"
 
 export const query = graphql`
   {
-    allFile {
+    front: allFile(filter: { relativeDirectory: { eq: "front" } }) {
+      edges {
+        node {
+          childImageSharp {
+            fixed(height: 140) {
+              ...GatsbyImageSharpFixed_tracedSVG
+            }
+          }
+        }
+      }
+    }
+
+    back: allFile(filter: { relativeDirectory: { eq: "back" } }) {
       edges {
         node {
           childImageSharp {
@@ -111,11 +123,11 @@ const IndexPage = ({ data }) => (
       <h4 className="color" style={{ fontSize: "20px" }}>
         Front-End Skills:
       </h4>
-      <Image items={data.allFile.edges} start={0} stop={6} />
+      <Image items={data.front.edges} />
       <h4 className="color" style={{ fontSize: "20px" }}>
         Back-End Skills:
       </h4>
-      <Image items={data.allFile.edges} start={7} stop={10} />
+      <Image items={data.back.edges} />
     </section>
 
     <h2 className="break" id="projects">
