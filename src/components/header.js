@@ -1,43 +1,65 @@
 import React from "react"
+import { Link } from "gatsby"
 import { Global, css } from "@emotion/core"
 import styled from "@emotion/styled"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import {
+  faCode,
+  faImage,
+  faAddressBook,
+  faUser,
+} from "@fortawesome/free-solid-svg-icons"
 
-const MainTitle = styled.h1`
-  color: white;
-  text-decoration: none;
-  font-size: 26px;
-  display: inline-block;
-`
 
 const Header = ({ siteTitle }) => (
   <>
     <Global
       styles={css`
         header {
+          background-color: white;
           display: flex;
-          justify-content: space-between;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
           border-bottom: 1px solid white;
+          position: fixed;
+          height: 100vh;
+          left: 0;
+          top: 0;
         }
 
-        a {
-          color: white;
-          text-decoration: none;
+        .passive {
+          height: 50px;
+          width: 100%;
+          height: 50px;
+          text-align: center;
+          padding-top: 7px;
         }
 
         .navigation {
           display: flex;
+          flex-direction: column;
           align-items: center;
-          width: 30%;
-          justify-content: space-evenly;
+          height: 28vh;
+          width: 80px;
+          justify-content: space-between;
         }
       `}
     />
     <header>
-      <MainTitle>{siteTitle}</MainTitle>
       <div className="navigation">
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#footer">Contact</a>
+        <Link to="/" className="passive" activeClassName="active">
+          <FontAwesomeIcon icon={faUser} size="2x" color="#86c8f7" />
+        </Link>
+        <Link to="/skill" activeClassName="active">
+          <FontAwesomeIcon icon={faCode} size="2x" color="#86c8f7" />
+        </Link>
+        <Link to="/projects" activeClassName="active">
+          <FontAwesomeIcon icon={faImage} size="2x" color="#86c8f7" />
+        </Link>
+        <Link to="/contact" activeClassName="active">
+          <FontAwesomeIcon icon={faAddressBook} size="2x" color="#86c8f7" />
+        </Link>
       </div>
     </header>
   </>

@@ -7,7 +7,7 @@ const Wrapper = styled.div`
   justify-content: space-evenly;
 `
 
-const Image = ({ items, start, stop }) => {
+const Image = ({ items }) => {
   return (
     <Wrapper>
       {items ? (

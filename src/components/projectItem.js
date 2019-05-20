@@ -1,12 +1,13 @@
 import React from "react"
 import Img from "gatsby-image"
 import styled from "@emotion/styled"
+import { Global, css, keyframes } from "@emotion/core"
 
 const Background = styled.div`
   background-color: white;
   overflow: hidden;
 
-  height: 280px;
+  height: 300px;
   padding-top: 25px;
   padding-left: 8%;
   width: 80%;
@@ -29,13 +30,26 @@ const A = styled.a`
   padding-top: 3px;
   border-radius: 20px;
 `
+const SlideRight = keyframes`
+0%{
+  transform:translateX(500px)
+}
+100%{
+  transform:translateX(0)
+}
+`
+
 const ProjectItem = ({ items }) => {
   console.log(items)
 
   return (
     <>
       {items.map(item => (
-        <Background>
+        <Background
+          css={css`
+            animation: ${SlideRight} 600ms ease-out 1 normal both;
+          `}
+        >
           <div>
             <a href={item.node.url} target="_blank">
               <Img
