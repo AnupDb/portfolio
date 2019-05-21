@@ -31,6 +31,14 @@ export const query = graphql`
     }
   }
 `
+const Visible = keyframes`
+0%{
+  opacity:0.1
+}
+100%{
+
+  opacity:1;
+}`
 const Slide = keyframes`
 0%{
   transform:translateX(-400px)
@@ -45,20 +53,20 @@ const skill = ({ data }) => {
       <section
         className="skills"
         css={css`
-          animation: ${Slide} 500ms ease-out 1 normal both;
+          animation: ${Slide} 500ms ease-out 1 normal both,
+            ${Visible} 500ms ease-out 1 normal both;
         `}
       >
         <Global
           styles={css`
             .skills {
               background-color: white;
-              margin: 0 auto;
-              padding-left: 90px;
-              padding-top: 10px;
+              left: 4%;
+              padding: 10px;
               width: 100%;
               position: absolute;
               top: 14%;
-              height: 680px;
+              height: 650px;
               box-shadow: 5px 5px 10px #888;
               h1 {
                 color: #86c8f7;

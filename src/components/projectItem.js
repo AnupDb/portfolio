@@ -10,7 +10,7 @@ const Background = styled.div`
   height: 300px;
   padding-top: 25px;
   padding-left: 8%;
-  width: 80%;
+
   margin: 0 auto;
   margin-top: 20px;
   display: flex;
@@ -29,6 +29,7 @@ const A = styled.a`
   text-align: center;
   padding-top: 3px;
   border-radius: 20px;
+  text-decoration: none;
 `
 const SlideRight = keyframes`
 0%{
@@ -38,16 +39,23 @@ const SlideRight = keyframes`
   transform:translateX(0)
 }
 `
+const Visible = keyframes`
+0%{
+  opacity:0.1
+}
+100%{
+ opacity:1;
+}`
 
 const ProjectItem = ({ items }) => {
-  console.log(items)
-
   return (
     <>
-      {items.map(item => (
+      {items.map((item, index) => (
         <Background
+          key={index}
           css={css`
-            animation: ${SlideRight} 600ms ease-out 1 normal both;
+            animation: ${SlideRight} 600ms ease-out 1 normal both,
+              ${Visible} 600ms ease-out 1 normal both;
           `}
         >
           <div>
@@ -61,7 +69,10 @@ const ProjectItem = ({ items }) => {
           </div>
           <div className="smallLine">
             <h3 className="sameLine">{item.node.title}</h3>
-            <h4 className="color" style={{ fontSize: "18px" }}>
+            <h4
+              className="color"
+              style={{ fontSize: "18px", marginBottom: "5px" }}
+            >
               Technologies Used:
             </h4>
             <ul className="none">

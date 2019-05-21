@@ -27,6 +27,14 @@ export const query = graphql`
     }
   }
 `
+const Visible = keyframes`
+0%{
+  opacity:0.1
+}
+100%{
+
+  opacity:1;
+}`
 const SlideLeft = keyframes`
 0%{
   transform:translateX(-400px)
@@ -47,7 +55,8 @@ const projects = ({ data }) => {
             font-weight: normal;
           }
           .projects {
-            margin: 0 auto;
+            position: absolute;
+            left: 7%;
           }
         `}
       />
@@ -55,7 +64,8 @@ const projects = ({ data }) => {
         <h2
           className="break"
           css={css`
-            animation: ${SlideLeft} 600ms ease-out 1 normal both;
+            animation: ${SlideLeft} 600ms ease-out 1 normal both,
+              ${Visible} 600ms ease-out 1 normal both;
           `}
         >
           PROJECTS:

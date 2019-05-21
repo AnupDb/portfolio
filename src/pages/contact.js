@@ -8,8 +8,18 @@ const SlideRight = keyframes`
 }
 100%{
   transform:translateX(0)
+ 
 }
 `
+const Visible = keyframes`
+0%{
+  opacity:0.1
+}
+100%{
+
+  opacity:1;
+}`
+
 const SlideLeft = keyframes`
 0%{
   transform:translateX(-400px)
@@ -41,7 +51,8 @@ export default () => (
     <h1
       className="call"
       css={css`
-        animation: ${SlideLeft} 500ms ease-out 1 normal both;
+        animation: ${SlideLeft} 500ms ease-out 1 normal both,
+          ${Visible} 500ms ease-out 1 normal both;
       `}
     >
       Let's do
@@ -52,7 +63,8 @@ export default () => (
     <section
       className="info"
       css={css`
-        animation: ${SlideRight} 500ms ease-out 1 normal both;
+        animation: ${SlideRight} 500ms ease-out 1 normal both,
+          ${Visible} 500ms ease-out 1 normal both;
       `}
     >
       <h2>Phone No:</h2>

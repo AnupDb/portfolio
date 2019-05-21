@@ -30,8 +30,9 @@ main {
 }
 .description {
   width: 45%;
-  padding-left: 40px;
+  padding-left: 1%;
   align-self: center;
+  padding-right: 10px;
 }
 .project {
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
