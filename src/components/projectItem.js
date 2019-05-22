@@ -3,18 +3,6 @@ import Img from "gatsby-image"
 import styled from "@emotion/styled"
 import { Global, css, keyframes } from "@emotion/core"
 
-const Background = styled.div`
-  background-color: white;
-  overflow: hidden;
-
-  height: 300px;
-  padding-top: 25px;
-  padding-left: 8%;
-
-  margin: 0 auto;
-  margin-top: 20px;
-  display: flex;
-`
 const Li = styled.li`
   list-style: none;
   color: #666;
@@ -50,25 +38,70 @@ const Visible = keyframes`
 const ProjectItem = ({ items }) => {
   return (
     <>
+      <Global
+        styles={css`
+          ul {
+            width: 100%;
+            display: flex;
+            flex-flow: row nowrap;
+          }
+          li:not(:first-child) {
+            margin-left: 1rem;
+          }
+          @media only screen and (min-width: 768px) {
+            .image-hold {
+              flex-basis: 33.3%;
+              flex-grow: 1;
+            }
+            .description {
+              flex-basis: 50%;
+              margin: 0px;
+              margin-left: 4%;
+              padding: 3rem;
+            }
+            .technologies {
+              h3 {
+                margin: 0px;
+              }
+              margin-left: 4%;
+            }
+            ul {
+              display: block;
+            }
+            li:not(:first-child) {
+              margin-left: 0rem;
+            }
+          }
+        `}
+      />
       {items.map((item, index) => (
-        <Background
+        <div
+          className="container"
           key={index}
           css={css`
-            animation: ${SlideRight} 600ms ease-out 1 normal both,
-              ${Visible} 600ms ease-out 1 normal both;
+            background-color: white;
+            padding: 1rem;
+            display: flex;
+            width: 100%;
+            flex-flow: column nowrap;
+
+            margin-top: 1rem;
+
+            @media only screen and (min-width: 768px) {
+              animation: ${SlideRight} 600ms ease-out 1 normal both,
+                ${Visible} 600ms ease-out 1 normal both;
+              flex-flow: row nowrap;
+            }
           `}
         >
-          <div>
+          <div className="image-hold">
             <a href={item.node.url} target="_blank">
-              <Img
-                className="project"
-                fixed={item.node.image.fixed}
-                style={{ float: "left", marginRight: "60px" }}
-              />
+              <Img className="project" fluid={item.node.image.fluid} />
             </a>
           </div>
-          <div className="smallLine">
-            <h3 className="sameLine">{item.node.title}</h3>
+
+          <div className="technologies">
+            <h3>{item.node.title}</h3>
             <h4
               className="color"
               style={{ fontSize: "18px", marginBottom: "5px" }}
@@ -86,8 +119,8 @@ const ProjectItem = ({ items }) => {
               View Code
             </A>
           </div>
-          <p className="smallLine description">{item.node.description}</p>
-        </Background>
+          <p className="description">{item.node.description}</p>
+        </div>
       ))}
     </>
   )

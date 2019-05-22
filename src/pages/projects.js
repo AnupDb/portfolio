@@ -10,8 +10,8 @@ export const query = graphql`
       edges {
         node {
           image {
-            fixed(height: 220, width: 350) {
-              ...GatsbyContentfulFixed_tracedSVG
+            fluid(maxHeight: 220, maxWidth: 350) {
+              ...GatsbyContentfulFluid_tracedSVG
             }
           }
           title
@@ -55,8 +55,6 @@ const projects = ({ data }) => {
             font-weight: normal;
           }
           .projects {
-            position: absolute;
-            left: 7%;
           }
         `}
       />

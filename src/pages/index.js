@@ -23,26 +23,44 @@ const IndexPage = ({ data }) => (
           color: white;
           margin: 0;
         }
+        @media only screen and (min-width: 768px) {
+          .title-1 {
+            font-size: 11rem;
+            .title-2 {
+              font-size: 6.2rem;
+            }
+            .center {
+              font-size: 1.6rem;
+            }
+            .highlight {
+              font-size: 2.6rem;
+            }
+          }
+        }
         .title-1 {
-          font-size: 110px;
-          margin-top: 10%;
+          font-size: 7rem;
         }
         .title-2 {
-          font-size: 62px;
+          font-size: 4rem;
         }
 
         .center {
-          font-size: 24px;
+          margin: 0.5rem 0 0 0;
+          font-size: 1rem;
           color: #666;
           text-align: center;
         }
         .highlight {
           color: #fcf786;
-          font-size: 26px;
+          font-size: 1.2rem;
+          margin-top: 1rem;
         }
 
         .cta {
-          height: 60vh;
+          height: 100vh;
+          display: flex;
+          flex-flow: column;
+          justify-content: center;
         }
       `}
     />

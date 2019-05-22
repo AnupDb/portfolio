@@ -1,5 +1,6 @@
 html {
   box-sizing: border-box;
+  font-size: 16px;
 }
 *,
 *:before,
@@ -13,27 +14,31 @@ body {
   font-family: "open sans";
   background-color: #86c8f7;
 }
+
 main {
-  width: 80%;
-  margin: auto;
-  height: 100vh;
-  position: relative;
+  margin-left: 6rem;
+  margin-right: 1rem;
+}
+@media only screen and (min-width: 768px) {
+  main {
+    width: 80%;
+    margin: auto;
+    padding-left: 4%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 .projectLink {
   color: #86c8f7;
 }
-.smallLine {
-  display: inline-block;
-}
+
 .none {
   padding: 0;
 }
-.description {
-  width: 45%;
-  padding-left: 1%;
-  align-self: center;
-  padding-right: 10px;
-}
+
 .project {
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
   transition: box-shadow 500ms;

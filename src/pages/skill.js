@@ -53,8 +53,10 @@ const skill = ({ data }) => {
       <section
         className="skills"
         css={css`
-          animation: ${Slide} 500ms ease-out 1 normal both,
-            ${Visible} 500ms ease-out 1 normal both;
+          @media only screen and (min-width: 768px) {
+            animation: ${Slide} 500ms ease-out 1 normal both,
+              ${Visible} 500ms ease-out 1 normal both;
+          }
         `}
       >
         <Global
@@ -64,9 +66,6 @@ const skill = ({ data }) => {
               left: 4%;
               padding: 10px;
               width: 100%;
-              position: absolute;
-              top: 14%;
-              height: 650px;
               box-shadow: 5px 5px 10px #888;
               h1 {
                 color: #86c8f7;

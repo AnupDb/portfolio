@@ -10,7 +10,6 @@ import {
   faUser,
 } from "@fortawesome/free-solid-svg-icons"
 
-
 const Header = ({ siteTitle }) => (
   <>
     <Global
@@ -40,9 +39,14 @@ const Header = ({ siteTitle }) => (
           display: flex;
           flex-direction: column;
           align-items: center;
-          height: 28vh;
+          height: 40vh;
           width: 80px;
           justify-content: space-between;
+        }
+        @media only screen and (min-width: 768px) {
+          .navigation {
+            height: 30vh;
+          }
         }
       `}
     />
