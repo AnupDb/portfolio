@@ -62,6 +62,7 @@ const skill = ({ data }) => {
         <Global
           styles={css`
             .skills {
+              margin-top: 1rem;
               background-color: white;
               left: 4%;
               padding: 10px;

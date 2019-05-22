@@ -39,11 +39,11 @@ export default () => (
           margin-left: 25%;
           h2 {
             font-size: 42px;
-            margin-bottom: 10px;
+            padding-bottom: 1rem;
           }
           p {
             font-size: 24px;
-            margin-top: 10px;
+            padding-top: 1rem;
           }
         }
       `}
