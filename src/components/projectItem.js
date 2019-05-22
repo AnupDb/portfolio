@@ -43,7 +43,7 @@ const ProjectItem = ({ items }) => {
           ul {
             width: 100%;
             display: flex;
-            flex-flow: row nowrap;
+            flex-flow: row wrap;
           }
           li:not(:first-child) {
             margin-left: 1rem;

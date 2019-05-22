@@ -22,10 +22,11 @@ const Header = ({ siteTitle }) => (
           justify-content: center;
 
           position: fixed;
-          height: 100vh;
+          height: 100%;
           left: 0;
           top: 0;
           bottom: 0;
+          z-index: 3;
         }
 
         .passive {
