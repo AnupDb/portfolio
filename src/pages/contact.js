@@ -33,17 +33,29 @@ export default () => (
       styles={css`
         .call {
           color: white;
-          font-size: 74px;
+          font-size: 3rem;
         }
         .info {
           margin-left: 25%;
           h2 {
-            font-size: 42px;
-            padding-bottom: 1rem;
+            font-size: 2rem;
+
+            margin: 0px;
+            margin-top: 1.6rem;
           }
           p {
-            font-size: 24px;
-            padding-top: 1rem;
+            font-size: 1.4rem;
+
+            margin: 0px;
+          }
+          @media only screen and (min-width: 768px) {
+            font-size: 7.4rem;
+            h2 {
+              font-size: 4.2rem;
+            }
+            p {
+              font-size: 2.4rem;
+            }
           }
         }
       `}

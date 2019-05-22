@@ -20,11 +20,12 @@ const Header = ({ siteTitle }) => (
           flex-direction: column;
           align-items: center;
           justify-content: center;
-          border-bottom: 1px solid white;
+
           position: fixed;
           height: 100vh;
           left: 0;
           top: 0;
+          bottom: 0;
         }
 
         .passive {
