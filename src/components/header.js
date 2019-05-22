@@ -14,6 +14,9 @@ const Header = ({ siteTitle }) => (
   <>
     <Global
       styles={css`
+        .wrapper {
+          height: 100%;
+        }
         header {
           background-color: white;
           display: flex;
@@ -52,22 +55,24 @@ const Header = ({ siteTitle }) => (
         }
       `}
     />
-    <header>
-      <div className="navigation">
-        <Link to="/" className="passive" activeClassName="active">
-          <FontAwesomeIcon icon={faUser} size="2x" color="#86c8f7" />
-        </Link>
-        <Link to="/skill" activeClassName="active">
-          <FontAwesomeIcon icon={faCode} size="2x" color="#86c8f7" />
-        </Link>
-        <Link to="/projects" activeClassName="active">
-          <FontAwesomeIcon icon={faImage} size="2x" color="#86c8f7" />
-        </Link>
-        <Link to="/contact" activeClassName="active">
-          <FontAwesomeIcon icon={faAddressBook} size="2x" color="#86c8f7" />
-        </Link>
-      </div>
-    </header>
+    <div className="wrapper">
+      <header>
+        <div className="navigation">
+          <Link to="/" className="passive" activeClassName="active">
+            <FontAwesomeIcon icon={faUser} size="2x" color="#86c8f7" />
+          </Link>
+          <Link to="/skill" activeClassName="active">
+            <FontAwesomeIcon icon={faCode} size="2x" color="#86c8f7" />
+          </Link>
+          <Link to="/projects" activeClassName="active">
+            <FontAwesomeIcon icon={faImage} size="2x" color="#86c8f7" />
+          </Link>
+          <Link to="/contact" activeClassName="active">
+            <FontAwesomeIcon icon={faAddressBook} size="2x" color="#86c8f7" />
+          </Link>
+        </div>
+      </header>
+    </div>
   </>
 )
 
