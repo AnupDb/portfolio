@@ -31,6 +31,9 @@ export default () => (
   <Layout>
     <Global
       styles={css`
+        .contact {
+          overflow: hidden;
+        }
         .call {
           color: white;
           font-size: 3rem;
@@ -38,13 +41,13 @@ export default () => (
         .info {
           margin-left: 25%;
           h2 {
-            font-size: 2rem;
+            font-size: 1.6rem;
 
             margin: 0px;
             margin-top: 1.6rem;
           }
           p {
-            font-size: 1.4rem;
+            font-size: 1rem;
 
             margin: 0px;
           }
@@ -60,29 +63,31 @@ export default () => (
         }
       `}
     />
-    <h1
-      className="call"
-      css={css`
-        animation: ${SlideLeft} 500ms ease-out 1 normal both,
-          ${Visible} 500ms ease-out 1 normal both;
-      `}
-    >
-      Let's do
-      <br />
-      something
-      <br /> amazing
-    </h1>
-    <section
-      className="info"
-      css={css`
-        animation: ${SlideRight} 500ms ease-out 1 normal both,
-          ${Visible} 500ms ease-out 1 normal both;
-      `}
-    >
-      <h2>Phone No:</h2>
-      <p>+91-9774588642</p>
-      <h2>Email:</h2>
-      <p>Sunnyoranup@gmail.com</p>
-    </section>
+    <div className="contact">
+      <h1
+        className="call"
+        css={css`
+          animation: ${SlideLeft} 500ms ease-out 1 normal both,
+            ${Visible} 500ms ease-out 1 normal both;
+        `}
+      >
+        Let's do
+        <br />
+        something
+        <br /> amazing
+      </h1>
+      <section
+        className="info"
+        css={css`
+          animation: ${SlideRight} 500ms ease-out 1 normal both,
+            ${Visible} 500ms ease-out 1 normal both;
+        `}
+      >
+        <h2>Phone No:</h2>
+        <p>+91-9774588642</p>
+        <h2>Email:</h2>
+        <p>sunnyoranup@gmail.com</p>
+      </section>
+    </div>
   </Layout>
 )
