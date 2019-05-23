@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="830" height="158" viewBox="0 0 830 158">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #fff;
+        stroke-width: 3px;
+        font-size: 64px;
+        font-family: HelveticaNeue, Helvetica Neue;
+      }
+    </style>
+  </defs>
+  <text id="Hello_I_m_Anup_DebBarma_I_m_a_creative_web_developer" data-name="Hello, I’m Anup DebBarma
+I’m a creative web developer" class="cls-1" transform="translate(415 64)"><tspan x="-381.152" y="0">Hello, I’m Anup DebBarma</tspan><tspan x="-411.296" y="77">I’m a creative web developer</tspan></text>
+</svg>

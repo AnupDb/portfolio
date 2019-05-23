@@ -1,10 +1,10 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, StaticQuery } from "gatsby"
 import ProjectItem from "../components/projectItem"
 import Layout from "../components/layout"
 import { Global, css, keyframes } from "@emotion/core"
 
-export const query = graphql`
+const query = graphql`
   {
     project: allContentfulPortfolio {
       edges {
@@ -44,36 +44,48 @@ const SlideLeft = keyframes`
 }
 `
 
-const projects = ({ data }) => {
+const projects = () => {
   return (
-    <Layout>
-      <Global
-        styles={css`
-          .break {
-            color: white;
-            font-size: 39px;
-            font-weight: normal;
-          }
-          .projects {
-          }
-        `}
-      />
-      <div className="projects">
-        <h2
-          className="break"
-          css={css`
-            animation: ${SlideLeft} 600ms ease-out 1 normal both,
-              ${Visible} 600ms ease-out 1 normal both;
-          `}
-        >
-          PROJECTS:
-        </h2>
-        <ProjectItem items={data.project.edges} />
-      </div>
-    </Layout>
+    <StaticQuery
+      query={query}
+      render={data => (
+        <Layout>
+          <Global
+            styles={css`
+              .break {
+                color: white;
+                padding: 4%;
+                font-size: 24px;
+                font-weight: normal;
+                color: #333;
+              }
+              @media only screen and (min-width: 768px) {
+                .break {
+                  padding: 4% 8%;
+                  text-align: center;
+                }
+                #projects {
+                  height: 100vh;
+                }
+              }
+            `}
+          />
+          <div id="projects">
+            <h2
+              className="break"
+              css={css`
+                animation: ${SlideLeft} 600ms ease-out 1 normal both,
+                  ${Visible} 600ms ease-out 1 normal both;
+              `}
+            >
+              PROJECTS:
+            </h2>
+            <ProjectItem items={data.project.edges} />
+          </div>
+        </Layout>
+      )}
+    />
   )
 }
-
-projects.propTypes = {}
 
 export default projects

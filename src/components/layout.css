@@ -1,6 +1,6 @@
 html {
   box-sizing: border-box;
-  font-size: 16px;
+  scroll-behavior: smooth;
   margin: 0;
 }
 *,
@@ -12,23 +12,13 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-family: "open sans";
-  background-color: #86c8f7;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
+    Helvetica, Arial, "Lucida Grande", sans-serif;
 }
 
 main {
-  margin-left: 6rem;
-  margin-right: 1rem;
 }
-@media only screen and (min-width: 768px) {
-  main {
-    width: 80%;
-    margin: auto;
-    padding-left: 4%;
-    height: 100vh;
-    position: relative;
-  }
-}
+
 .projectLink {
   color: #86c8f7;
 }
