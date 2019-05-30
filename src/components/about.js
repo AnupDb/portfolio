@@ -5,6 +5,14 @@ import test from "../images/analyze.png"
 import efficient from "../images/efficient.png"
 import brain from "../images/brain.png"
 import me from "../images/songwriter.png"
+
+const Fade = keyframes`
+from{
+  opacity:0.2;
+}to{
+  opacity:1;
+}`
+
 export default () => {
   return (
     <>
@@ -127,8 +135,8 @@ export default () => {
             </div>
             <h3>Testable</h3>
             <p>
-              Writing code which can be independently tested Instead of the
-              write console log everywhere
+              Code which can be tested independently with best TDD development
+              practices
             </p>
           </div>
           <div className="badge-holder">
