@@ -46,6 +46,10 @@ const ProjectItem = ({ items }) => (
           .container{
             margin:4%;
           }
+          .color{
+            margin-top:0;
+            margin-bottom:10px;
+          }
           .image-hold {
             position: relative;
             margin-bottom:10px;
@@ -75,6 +79,7 @@ const ProjectItem = ({ items }) => (
               padding-left: 20px;
               h3 {
                 font-size: 24px;
+                margin-bottom:10px;
               }
               h4 {
                 color: #333;
@@ -89,8 +94,8 @@ const ProjectItem = ({ items }) => (
                 display: flex;
              flex-flow: row wrap;
               }
-              li:not(:first-child) {
-                margin-left: 1rem;
+              li {
+                margin-right: 1rem;
               }
             }
             .opaque:actvie{
@@ -118,7 +123,7 @@ const ProjectItem = ({ items }) => (
 
     {items.map((item, index) => (
       <div className="image-hold">
-        <a href={item.node.url} target="_blank">
+        <a>
           <Img className="project" fluid={item.node.image.fluid} />
         </a>
         <div className="technology opaque">
@@ -131,7 +136,7 @@ const ProjectItem = ({ items }) => (
             {item.node.tech4 ? <Li>{item.node.tech4}</Li> : null}
           </ul>
 
-          <A className="projectLink" href={item.node.url} target="_blank">
+          <A className="projectLink" href={item.node.codeurl} target="_blank">
             View Code
           </A>
           <A className="projectLink" href={item.node.url} target="_blank">

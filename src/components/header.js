@@ -14,14 +14,14 @@ const Header = ({ siteTitle }) => (
           top: 0;
           background-color: #4a4a4a;
           nav {
-            padding: 0.4rem 4%;
+            padding: 0.2rem 4%;
           }
           a {
             display: inline-block;
-            padding: 1rem;
+            padding: 0.3rem;
             color: white;
             text-decoration: none;
-            font-size: 0.8rem;
+            font-size: 12px;
             &:hover {
               cursor: pointer;
               color: #86c8f7;
@@ -30,13 +30,13 @@ const Header = ({ siteTitle }) => (
           @media only screen and (min-width: 768px) {
             a {
               font-size: 16px;
-              padding: 1rem;
+              padding-right: 1.4rem;
               &:nth-of-type(1) {
                 padding-left: 0;
               }
             }
             nav {
-              padding: 0.4rem 7.8%;
+              padding: 0.2rem 7.8%;
             }
           }
         }

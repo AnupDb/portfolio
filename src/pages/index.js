@@ -1,6 +1,6 @@
 import React, { useEffect } from "react"
 import { Global, css, keyframes } from "@emotion/core"
-import back from "../images/background.jpg"
+import back from "../images/landing.jpg"
 import Layout from "../components/layout"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons"

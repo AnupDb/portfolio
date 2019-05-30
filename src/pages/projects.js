@@ -56,7 +56,7 @@ const projects = () => {
                 color: white;
                 padding: 4%;
                 font-size: 24px;
-                font-weight: normal;
+                font-weight: bold;
                 color: #333;
               }
               @media only screen and (min-width: 768px) {
