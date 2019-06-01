@@ -20,7 +20,9 @@ export default () => {
         styles={css`
           .about-section {
             height: 100vh;
-            padding-top: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
           }
           .about-header {
             h1 {
