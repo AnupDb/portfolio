@@ -19,10 +19,10 @@ export default () => {
       <Global
         styles={css`
           .about-section {
+            display: block;
             height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
+            padding-top: 10px;
+            margin: auto;
           }
           .about-header {
             h1 {
@@ -114,6 +114,11 @@ export default () => {
             }
             .skills {
               width: 50%;
+            }
+            .about-section {
+              h1 {
+                animation: ${Fade} 2000ms ease-out 1 normal both;
+              }
             }
           }
         `}

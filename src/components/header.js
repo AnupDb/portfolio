@@ -7,12 +7,11 @@ const Header = ({ siteTitle }) => (
     <Global
       styles={css`
         header {
-          display: fixed;
           position: fixed;
           width: 100%;
           z-index: 3;
           top: 0;
-          background-color: #4a4a4a;
+          background-color: #222933;
           nav {
             padding: 0.2rem 4%;
           }
