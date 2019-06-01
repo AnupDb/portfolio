@@ -67,6 +67,7 @@ const projects = () => {
                 }
                 #projects {
                   height: 100vh;
+                  clear: both;
                 }
               }
             `}

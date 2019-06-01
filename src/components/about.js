@@ -16,8 +16,7 @@ export default () => {
           .about-section {
             display: block;
             height: 100vh;
-            padding-top: 10px;
-            margin: auto;
+            padding-top: 3%;
           }
           .about-header {
             h1 {
@@ -30,7 +29,7 @@ export default () => {
               height: 5px;
               width: 100px;
               margin: 0 auto;
-              margin-bottom: 30px;
+              margin-bottom: 5%;
             }
           }
           .badges {
@@ -116,94 +115,99 @@ export default () => {
               }
             }
           }
+          .info-section {
+            margin-top: 5%;
+          }
         `}
       />
       <section className="about-section" id="about">
-        <section className="about-header">
-          <Fade left delay={300} distance="100px">
-            <h1>About</h1>
-          </Fade>
-          <Fade left delay={300} distance="100px">
-            <div className="about-border" />
-          </Fade>
-        </section>
-        <section className="badges">
-          <div className="badge-holder">
-            <Zoom>
-              <div className="badge">
-                <img src={code} alt="clean code" />
-              </div>
-            </Zoom>
-            <h3>Clean</h3>
-            <p>Code that is easy to read and maintain is my first priority</p>
-          </div>
-          <div className="badge-holder">
-            <Zoom>
-              <div className="badge">
-                <img src={test} alt="testable" />
-              </div>
-            </Zoom>
-            <h3>Testable</h3>
-            <p>
-              Code which can be tested independently with best TDD development
-              practices
-            </p>
-          </div>
-          <div className="badge-holder">
-            <Zoom>
-              <div className="badge">
-                <img src={efficient} alt="efficient" />
-              </div>
-            </Zoom>
-            <h3>Efficient</h3>
-            <p>
-              Optimised content management and improved web performance for
-              highly efficient websites
-            </p>
-          </div>
-          <div className="badge-holder">
-            <Zoom>
-              <div className="badge">
-                <img src={brain} alt="intuitive brain" />
-              </div>
-            </Zoom>
-            <h3>Intuitive</h3>
-            <p>
-              Easy to use UI/UX oriented development for a a smooth user
-              experience
-            </p>
-          </div>
-        </section>
-        <section className="info-section">
-          <div className="about-me">
-            <img src={me} alt="Anup's illustration" />
-            <p>
-              I am a JavaScript Developer with a deep passion for UI/UX driven
-              solutions. I enjoy finding beautiful solutions to complex coding
-              problems.
-              <br /> When I’m not coding or studying design, you’ll find me
-              playing instruments, looking at art or reading Dostoevsky{" "}
-            </p>
-          </div>
-          <div className="skills">
-            <ul>
-              <li>HTML</li>
-              <li>CSS/SASS</li>
-              <li>JavaScript</li>
-              <li>GraphQL</li>
-              <li>Node.js</li>
-              <li>MongoDB</li>
-            </ul>
-            <ul>
-              <li>React/Redux</li>
-              <li>Angular</li>
-              <li>JavaScript</li>
-              <li>GraphQL</li>
-              <li>Node.js</li>
-              <li>MongoDB</li>
-            </ul>
-          </div>
-        </section>
+        <div className="move">
+          <section className="about-header">
+            <Fade left delay={300} distance="100px">
+              <h1>About</h1>
+            </Fade>
+            <Fade left delay={300} distance="100px">
+              <div className="about-border" />
+            </Fade>
+          </section>
+          <section className="badges">
+            <div className="badge-holder">
+              <Zoom>
+                <div className="badge">
+                  <img src={code} alt="clean code" />
+                </div>
+              </Zoom>
+              <h3>Clean</h3>
+              <p>Code that is easy to read and maintain is my first priority</p>
+            </div>
+            <div className="badge-holder">
+              <Zoom>
+                <div className="badge">
+                  <img src={test} alt="testable" />
+                </div>
+              </Zoom>
+              <h3>Testable</h3>
+              <p>
+                Code which can be tested independently with best TDD development
+                practices
+              </p>
+            </div>
+            <div className="badge-holder">
+              <Zoom>
+                <div className="badge">
+                  <img src={efficient} alt="efficient" />
+                </div>
+              </Zoom>
+              <h3>Efficient</h3>
+              <p>
+                Optimised content management and improved web performance for
+                highly efficient websites
+              </p>
+            </div>
+            <div className="badge-holder">
+              <Zoom>
+                <div className="badge">
+                  <img src={brain} alt="intuitive brain" />
+                </div>
+              </Zoom>
+              <h3>Intuitive</h3>
+              <p>
+                Easy to use UI/UX oriented development for a a smooth user
+                experience
+              </p>
+            </div>
+          </section>
+          <section className="info-section">
+            <div className="about-me">
+              <img src={me} alt="Anup's illustration" />
+              <p>
+                I am a JavaScript Developer with a deep passion for UI/UX driven
+                solutions. I enjoy finding beautiful solutions to complex coding
+                problems.
+                <br /> When I’m not coding or studying design, you’ll find me
+                playing instruments, looking at art or reading Dostoevsky{" "}
+              </p>
+            </div>
+            <div className="skills">
+              <ul>
+                <li>HTML</li>
+                <li>CSS/SASS</li>
+                <li>JavaScript</li>
+                <li>GraphQL</li>
+                <li>Node.js</li>
+                <li>MongoDB</li>
+              </ul>
+              <ul>
+                <li>React/Redux</li>
+                <li>Angular</li>
+                <li>JavaScript</li>
+                <li>GraphQL</li>
+                <li>Node.js</li>
+                <li>MongoDB</li>
+              </ul>
+            </div>
+          </section>
+        </div>
       </section>
     </>
   )
