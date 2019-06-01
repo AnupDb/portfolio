@@ -3,6 +3,7 @@ import { graphql, StaticQuery } from "gatsby"
 import ProjectItem from "../components/projectItem"
 import Layout from "../components/layout"
 import { Global, css, keyframes } from "@emotion/core"
+import Fade from "react-reveal/Fade"
 
 const query = graphql`
   {
@@ -71,16 +72,20 @@ const projects = () => {
             `}
           />
           <div id="projects">
-            <h2
-              className="break"
-              css={css`
-                animation: ${SlideLeft} 600ms ease-out 1 normal both,
-                  ${Visible} 600ms ease-out 1 normal both;
-              `}
-            >
-              PROJECTS:
-            </h2>
-            <ProjectItem items={data.project.edges} />
+            <Fade left delay={300} distance="100px">
+              <h2
+                className="break"
+                css={css`
+                  animation: ${SlideLeft} 600ms ease-out 1 normal both,
+                    ${Visible} 600ms ease-out 1 normal both;
+                `}
+              >
+                PROJECTS:
+              </h2>
+            </Fade>
+            <Fade bottom delay={250}>
+              <ProjectItem items={data.project.edges} />
+            </Fade>
           </div>
         </Layout>
       )}

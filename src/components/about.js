@@ -5,14 +5,9 @@ import test from "../images/analyze.png"
 import efficient from "../images/efficient.png"
 import brain from "../images/brain.png"
 import me from "../images/songwriter.png"
-
-const Fade = keyframes`
-from{
-  opacity:0.2;
-}to{
-  opacity:1;
-}`
-
+import Slide from "react-reveal/Slide"
+import Fade from "react-reveal/Fade"
+import Zoom from "react-reveal/Zoom"
 export default () => {
   return (
     <>
@@ -125,21 +120,29 @@ export default () => {
       />
       <section className="about-section" id="about">
         <section className="about-header">
-          <h1>About</h1>
-          <div className="about-border" />
+          <Fade left delay={300} distance="100px">
+            <h1>About</h1>
+          </Fade>
+          <Fade left delay={300} distance="100px">
+            <div className="about-border" />
+          </Fade>
         </section>
         <section className="badges">
           <div className="badge-holder">
-            <div className="badge">
-              <img src={code} alt="clean code" />
-            </div>
+            <Zoom>
+              <div className="badge">
+                <img src={code} alt="clean code" />
+              </div>
+            </Zoom>
             <h3>Clean</h3>
             <p>Code that is easy to read and maintain is my first priority</p>
           </div>
           <div className="badge-holder">
-            <div className="badge">
-              <img src={test} alt="testable" />
-            </div>
+            <Zoom>
+              <div className="badge">
+                <img src={test} alt="testable" />
+              </div>
+            </Zoom>
             <h3>Testable</h3>
             <p>
               Code which can be tested independently with best TDD development
@@ -147,9 +150,11 @@ export default () => {
             </p>
           </div>
           <div className="badge-holder">
-            <div className="badge">
-              <img src={efficient} alt="efficient" />
-            </div>
+            <Zoom>
+              <div className="badge">
+                <img src={efficient} alt="efficient" />
+              </div>
+            </Zoom>
             <h3>Efficient</h3>
             <p>
               Optimised content management and improved web performance for
@@ -157,9 +162,11 @@ export default () => {
             </p>
           </div>
           <div className="badge-holder">
-            <div className="badge">
-              <img src={brain} alt="intuitive brain" />
-            </div>
+            <Zoom>
+              <div className="badge">
+                <img src={brain} alt="intuitive brain" />
+              </div>
+            </Zoom>
             <h3>Intuitive</h3>
             <p>
               Easy to use UI/UX oriented development for a a smooth user

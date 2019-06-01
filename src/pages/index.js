@@ -8,14 +8,7 @@ import About from "../components/about"
 import Project from "./projects"
 import SEO from "../components/seo"
 import Contact from "../components/contact"
-
-const Fade = keyframes`
-from{
-  opacity:0.2;
-}to{
-  opacity:1;
-}
-`
+import Fade from "react-reveal/Fade"
 
 const Floating = keyframes` 
   from {
@@ -109,11 +102,13 @@ const IndexPage = ({ data }) => {
 
       <div className="back" id="home">
         <div className="front">
-          <p className="cta">
-            Hello I'm Anup DebBarma
-            <br />
-            I'm a creative web developer
-          </p>
+          <Fade top cascade>
+            <p className="cta">
+              Hello I'm Anup DebBarma
+              <br />
+              I'm a creative web developer
+            </p>
+          </Fade>
           <div className="arrow-btn">
             <a href="#about">Hire me</a>
             <FontAwesomeIcon icon={faArrowRight} className="arrow" />
