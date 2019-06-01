@@ -66,7 +66,6 @@ const projects = () => {
                   text-align: center;
                 }
                 #projects {
-                  height: 100vh;
                   clear: both;
                 }
               }

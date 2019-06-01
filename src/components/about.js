@@ -15,7 +15,7 @@ export default () => {
         styles={css`
           .about-section {
             display: block;
-            height: 100vh;
+            height: 100%;
             padding-top: 3%;
           }
           .about-header {
