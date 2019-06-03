@@ -27,10 +27,8 @@ const IndexPage = ({ data }) => {
     <Layout>
       <Global
         styles={css`
-          .back {
-            z-index: -1;
-
-            height: 100vh;
+          .front {
+            position: relative;
             background: rgb(142, 197, 252); /* Old browsers */
             background: -moz-linear-gradient(
               45deg,
@@ -47,10 +45,9 @@ const IndexPage = ({ data }) => {
               rgba(142, 197, 252, 1) 1%,
               rgba(224, 195, 252, 1) 83%
             ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-          }
-          .front {
+            z-index: 3;
             width: 100%;
-            height: 100vh;
+            height: calc(100vh - 50px);
             background-color: rgba(0, 0, 0, 0.1);
             display: flex;
             flex-direction: column;
@@ -88,6 +85,20 @@ const IndexPage = ({ data }) => {
               background-color: #86c8f7;
               transition: background-color 300ms ease-out;
               cursor: pointer;
+            }
+            &:after {
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              content: "";
+              background: inherit;
+              z-index: -1;
+              top: 0;
+              right: 0;
+              bottom: 0;
+              left: 0;
+              transform-origin: top right;
+              transform: skewY(-4deg);
             }
           }
 

@@ -8,6 +8,10 @@ import me from "../images/songwriter.png"
 import Slide from "react-reveal/Slide"
 import Fade from "react-reveal/Fade"
 import Zoom from "react-reveal/Zoom"
+import front from "../images/front.png"
+import database from "../images/database.png"
+import backend from "../images/backend.png"
+
 export default () => {
   return (
     <>
@@ -75,40 +79,75 @@ export default () => {
             }
           }
           .about-me {
-            float: left;
             padding-left: 4%;
             width: 100%;
+            display: flex;
+            flex-flow: row no-wrap;
+            justify-content: center;
+            align-items: center;
             img {
               height: 200px;
               width: 200px;
-              display: block;
-              margin: 0 auto;
             }
             p {
-              width: 100%;
+              flex-basis: 50%;
             }
           }
           .skills {
-            float: left;
-            width: 100%;
+            margin-top: 40px;
+            position: relative;
             display: flex;
-            justify-content: space-evenly;
+            flex-flow: row wrap;
+            justify-content: center;
+            padding: 4%;
+            background: rgb(142, 197, 252); /* Old browsers */
+            background: -moz-linear-gradient(
+              45deg,
+              rgba(142, 197, 252, 1) 1%,
+              rgba(224, 195, 252, 1) 83%
+            ); /* FF3.6-15 */
+            background: -webkit-linear-gradient(
+              45deg,
+              rgba(142, 197, 252, 1) 1%,
+              rgba(224, 195, 252, 1) 83%
+            ); /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(
+              45deg,
+              rgba(142, 197, 252, 1) 1%,
+              rgba(224, 195, 252, 1) 83%
+            ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            &:after {
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              content: "";
+              background: inherit;
+              z-index: -1;
+              top: 0;
+              right: 0;
+              bottom: 0;
+              left: 0;
+              transform-origin: top right;
+              transform: skewY(-4deg);
+            }
             ul {
-              margin-top: 50px;
               display: inline-block;
+              background: #d9d9d9;
+              width: 240px;
+              height: 280px;
+              margin: 0;
+              padding: 0;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
               li {
-                padding: 10px;
                 list-style: none;
+                padding: 5px;
+                text-align: center;
               }
             }
           }
           @media only screen and (min-width: 768px) {
-            .about-me {
-              width: 50%;
-            }
-            .skills {
-              width: 50%;
-            }
             .about-section {
               h1 {
                 animation: ${Fade} 2000ms ease-out 1 normal both;
@@ -117,6 +156,50 @@ export default () => {
           }
           .info-section {
             margin-top: 5%;
+          }
+          .maincontainer {
+            width: 240px;
+            height: 280px;
+            position: relative;
+            margin: 4px;
+          }
+          .thecard {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            transform-style: preserve-3d;
+            transition: all 0.5s ease;
+          }
+          .thecard:hover {
+            transform: rotateY(180deg);
+          }
+          .thefront {
+            font-size: 18px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            background-color: white;
+            color: #333;
+
+            img {
+              width: 70px;
+            }
+          }
+          .theback {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+
+            color: #333;
+            transform: rotateY(180deg);
           }
         `}
       />
@@ -189,22 +272,57 @@ export default () => {
               </p>
             </div>
             <div className="skills">
-              <ul>
-                <li>HTML</li>
-                <li>CSS/SASS</li>
-                <li>JavaScript</li>
-                <li>GraphQL</li>
-                <li>Node.js</li>
-                <li>MongoDB</li>
-              </ul>
-              <ul>
-                <li>React/Redux</li>
-                <li>Angular</li>
-                <li>JavaScript</li>
-                <li>GraphQL</li>
-                <li>Node.js</li>
-                <li>MongoDB</li>
-              </ul>
+              <div className="maincontainer">
+                <div className="thecard">
+                  <div className="thefront">
+                    <img src={front} alt="" />
+                    <p>Front End Skills:</p>
+                  </div>
+                  <div className="theback">
+                    <ul>
+                      <li>HTML</li>
+                      <li>CSS/SASS</li>
+                      <li>JavaScript</li>
+                      <li>GraphQL</li>
+                      <li>Node.js</li>
+                      <li>MongoDB</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div className="maincontainer">
+                <div className="thecard">
+                  <div className="thefront">
+                    <img src={backend} alt="" />
+                    <p>Back End Skills:</p>
+                  </div>
+                  <div className="theback">
+                    <ul>
+                      <li>Node</li>
+                      <li>Express</li>
+                      <li>Python</li>
+                      <li>GraphQL</li>
+                      <li>Flask</li>
+                      <li>Django</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div className="maincontainer">
+                <div className="thecard">
+                  <div className="thefront">
+                    <img src={database} alt="" />
+                    <p>Database Skills:</p>
+                  </div>
+                  <div className="theback">
+                    <ul>
+                      <li>MongoDB</li>
+                      <li>PostgreSQL</li>
+                      <li>AWS</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
             </div>
           </section>
         </div>

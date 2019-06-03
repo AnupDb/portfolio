@@ -7,7 +7,7 @@ export default () => {
         styles={css`
           .contact {
             padding-top: 60px;
-            height: 100vh;
+            height: 700px;
             background: #222933;
             display: flex;
             flex-flow: column nowrap;
@@ -85,7 +85,7 @@ export default () => {
       <h1>Contact</h1>
       <div className="bar" />
       <p>Have a question or want to work together?</p>
-      <form action="">
+      <form action="https://formspree.io/anup.dev96@gmail.com" method="POST">
         <input type="text" placeholder="Name" />
         <input type="text" placeholder="Email" />
         <textarea name="message" placeholder="Your message" />
