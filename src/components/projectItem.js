@@ -47,8 +47,7 @@ const ProjectItem = ({ items }) => (
             margin:4%;
           }
           .color{
-            margin-top:0;
-            margin-bottom:10px;
+            margin:0;
           }
           .image-hold {
             position: relative;
@@ -93,6 +92,8 @@ const ProjectItem = ({ items }) => (
                 width: 100%;
                 display: flex;
              flex-flow: row wrap;
+             margin-top:2px;
+
               }
               li {
                 margin-right: 1rem;

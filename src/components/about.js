@@ -264,7 +264,7 @@ export default () => {
             <div className="about-me">
               <img src={me} alt="Anup's illustration" />
               <p>
-                I am a JavaScript Developer with a deep passion for UI/UX driven
+                I am a JavaScript and Python addict with a love for UI/UX driven
                 solutions. I enjoy finding beautiful solutions to complex coding
                 problems.
                 <br /> When I’m not coding or studying design, you’ll find me
@@ -283,9 +283,9 @@ export default () => {
                       <li>HTML</li>
                       <li>CSS/SASS</li>
                       <li>JavaScript</li>
-                      <li>GraphQL</li>
-                      <li>Node.js</li>
-                      <li>MongoDB</li>
+                      <li>React/Redux</li>
+                      <li>Gatsby</li>
+                      <li>Angular</li>
                     </ul>
                   </div>
                 </div>
